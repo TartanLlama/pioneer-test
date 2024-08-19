@@ -110,7 +110,7 @@ namespace FileSystem {
 				return str;
 		}
 
-		return absolute_path(std::string("data"));
+		return absolute_path(std::string("../data"));
 #endif
 	}
 
