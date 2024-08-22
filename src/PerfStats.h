@@ -88,7 +88,7 @@ namespace Perf {
 		// Cache the previous frame
 		FrameInfo m_frameCache;
 
-		bool m_neverReset = false;
+		
 
 		// hashmap of counter IDs to counter names
 		std::map<std::size_t, std::string> m_definedCounters;
@@ -97,6 +97,7 @@ namespace Perf {
 		std::mutex m_counterMutex;
 		// store a std::hash instance so we don't have to recreate it every time we want to hash a string.
 		std::hash<std::string> m_strHashFn;
+		bool m_neverReset = false;
 	};
 
 } // namespace Perf
