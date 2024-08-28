@@ -337,7 +337,9 @@ list(APPEND UNITTEST_SRC_FOLDERS
 add_source_folders(UNITTEST UNITTEST_SRC_FOLDERS)
 
 add_executable(${PROJECT_NAME} WIN32 src/main.cpp ${RESOURCES})
+include(CTest)
 add_executable(unittest ${UNITTEST_CXX_FILES})
+add_test(NAME unittest COMMAND $<TARGET_FILE:unittest>)
 add_executable(modelcompiler src/modelcompiler.cpp)
 add_executable(savegamedump
 	src/savegamedump.cpp
